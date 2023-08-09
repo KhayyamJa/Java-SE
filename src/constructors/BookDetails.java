@@ -8,7 +8,7 @@ public class BookDetails {
         System.out.println("Default Book Details: ");
         defaultbookDetails.display();
 
-        BookDetails bookDetails = new BookDetails("Down and Out in Paris and London","George Orwell",1933,230);
+        BookDetails bookDetails = new BookDetails("Down and Out in Paris and London", "George Orwell", 1933, 230);
         System.out.println("\nBook Details");
         bookDetails.display();
 
@@ -16,11 +16,13 @@ public class BookDetails {
         bookDetails.update();
         bookDetails.display();
     }
+
     private String title;
     private String author;
     private int yearPublished;
     private int pageCount;
-    public BookDetails(){
+
+    public BookDetails() {
         this.title = "Unknown";
         this.author = "Unknown";
         this.yearPublished = 0;
@@ -34,7 +36,8 @@ public class BookDetails {
         this.yearPublished = yearPublished;
         this.pageCount = pageCount;
     }
-    public void update(){
+
+    public void update() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter Title: ");
         this.title = sc.nextLine();
@@ -46,7 +49,8 @@ public class BookDetails {
         this.pageCount = sc.nextInt();
 
     }
-    public void display(){
+
+    public void display() {
         System.out.println("Title: " + title);
         System.out.println("Author: " + author);
         System.out.println("Year Published: " + yearPublished);
